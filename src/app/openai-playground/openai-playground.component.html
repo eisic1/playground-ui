@@ -1,0 +1,64 @@
+<div class="card">
+  <div class="card-header">
+    <div class="playground-header-wrapper d-flex justify-content-between">
+      <div class="playground-title fw-bold">OpenAI Playground</div>
+      <div class="playgroind-preset-wrapper">
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="card-body">
+    <div class="playground-wrapper pg-body">
+      <div class="pg-left">
+        <div class="playground-text">
+          <div class="parent-container">
+            <div class="playground-container-wrapper request">
+              <div>Character count: <span class="playground-number badge mr-4 text-dark">0</span>
+                Word count: <span class="playground-number badge mr-4 text-dark">0</span>
+                Token count: <span class="playground-number badge mr-4 text-dark">0</span>
+                Price: <span title="Calculated approximate price" class="playground-number badge mr-4 text-dark">0</span></div>
+                <!-- PLAYGROUND CONTAINER ngx-openai-editor -->
+                <div>
+                  <input class="form-control" type="text">
+                </div>
+            </div>
+            <div class="playground-container-wrapper center mt-3 mb-3">
+              <div class="d-flex justify-content-between">
+                <div class="d-flex justify-content-between">
+                  <h5 class="my-auto mr-5">Result</h5>
+                </div>
+                <div class="playground-toolbar mt-4 btn-group">
+                  <button (click)="runSubmit()" class="btn btn-primary mb-3">Run</button>
+                <!--  <button (click)="spellCheck()" class="btn btn-light mb-3">Spell Check</button>-->
+                  <button (click)="copyResult()" class="btn btn-info mb-3">Copy result</button>
+                  <button (click)="clearEditor()" class="btn btn-danger mb-3">Clear</button>
+                </div>
+              </div>
+            </div>
+            <div class="playground-container-wrapper response">
+              <!-- PLAYGROUND CONTAINER ngx-openai-editor -->
+                <div>
+                  <input class="form-control" type="text">
+                </div>
+              <div class="mt-2 mb-2">Result Character count: <span
+                class="playground-number badge mr-4 text-dark">0</span>
+                Result Word count: <span class="playground-number badge mr-4 text-dark">0</span>
+                Result Token count: <span class="playground-number badge mr-4 text-dark">0</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pg-right">
+        <div class="pg-right-content">
+          <div class="parameter-panel">
+            <div class="parameter-panel-grid">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
