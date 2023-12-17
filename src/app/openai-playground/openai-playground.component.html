@@ -1,4 +1,4 @@
-<div class="card">
+<div class="card m-5">
   <div class="card-header">
     <div class="playground-header-wrapper d-flex justify-content-between">
       <div class="playground-title fw-bold">OpenAI Playground</div>
@@ -19,11 +19,11 @@
                 Token count: <span class="playground-number badge mr-4 text-dark">0</span>
                 Price: <span title="Calculated approximate price" class="playground-number badge mr-4 text-dark">0</span></div>
                 <!-- PLAYGROUND CONTAINER ngx-openai-editor -->
-                <div>
-                  <input class="form-control" type="text">
+                <div class="playground-container mt-2">
+                  <textarea class="form-control h-100 no-resize"></textarea>
                 </div>
             </div>
-            <div class="playground-container-wrapper center mt-3 mb-3">
+            <div class="playground-container-wrapper center mt-2 mb-3">
               <div class="d-flex justify-content-between">
                 <div class="d-flex justify-content-between">
                   <h5 class="my-auto mr-5">Result</h5>
@@ -38,8 +38,8 @@
             </div>
             <div class="playground-container-wrapper response">
               <!-- PLAYGROUND CONTAINER ngx-openai-editor -->
-                <div>
-                  <input class="form-control" type="text">
+                <div class="playground-container">
+                  <textarea class="form-control h-100 no-resize" readonly></textarea>
                 </div>
               <div class="mt-2 mb-2">Result Character count: <span
                 class="playground-number badge mr-4 text-dark">0</span>
