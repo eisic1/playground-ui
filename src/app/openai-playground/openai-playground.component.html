@@ -55,6 +55,111 @@
         <div class="pg-right-content">
           <div class="parameter-panel">
             <div class="parameter-panel-grid">
+              <div aria-haspopup="true" aria-expanded="false">
+                <div class="parameters-engine-select-label">
+                  <div class="body-small control-label" aria-haspopup="true" aria-expanded="false">Engine</div>
+                </div>
+                <div class="engine-select">
+                  <nb-select fullWidth="true" placeholder="Select Engine">
+                    <nb-option-group title="Open AI">
+                      <nb-option>
+                        <div>dasdasd</div>
+                      </nb-option>
+                    </nb-option-group>
+                    <nb-option-group title="Trained">
+                      <nb-option>
+                        <div>dasdasda<</div>
+                      </nb-option>
+                    </nb-option-group>
+                  </nb-select>
+                </div>
+              </div>
+              <div aria-haspopup="true" aria-expanded="false">
+                <div class="slider">
+                  <div class="d-flex justify-content-between">
+                    <div class="body-small">Randomness
+                    </div>
+                    <div>
+                      <input class="input-small" type="number">
+                    </div>
+                  </div>
+                  <!-- SLIDER -->
+                </div>
+              </div>
+              <div aria-haspopup="true" aria-expanded="false">
+                <div class="slider">
+                  <div class="d-flex justify-content-between">
+                    <div class="body-small">Maximum length
+                    </div>
+                    <div><input class="input-small" type="number"></div>
+                  </div>
+                  <!-- SLIDER -->
+                </div>
+              </div>
+              <div>
+                <div class="stop-sequence-container">
+                  <div aria-haspopup="true" aria-expanded="false">
+                    <div class="body-small control-label">
+                      <div>Stop sequences</div>
+                      <div class="control-note text-muted">Enter sequence and press Tab</div>
+                    </div>
+                    <div class="tag-container">
+                      <tag-input>
+                        <ng-template>
+                         <!-- <span>{{ item.name }}</span>
+                          <span class="ml-2 ng2-tag__remove-button">x</span>-->
+                        </ng-template>
+                        <tag-input-dropdown 
+                          [dynamicUpdate]="false"
+                          [zIndex]="10000">
+                          <ng-template>
+                            <!--{{ item.name }}-->
+                          </ng-template>
+                        </tag-input-dropdown>
+                      </tag-input>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div aria-haspopup="true" aria-expanded="false">
+                <div class="slider">
+                  <div class="d-flex justify-content-between">
+                    <div class="body-small">Top P</div>
+                    <div><input class="input-small" type="number"></div>
+                  </div>
+                  <!-- SLIDER -->
+                </div>
+              </div>
+              <div aria-haspopup="true" aria-expanded="false">
+                <div class="slider">
+                  <div class="d-flex justify-content-between">
+                    <div class="body-small">
+                      Frequency Penalty
+                    </div>
+                    <div><input class="input-small" type="number"></div>
+                  </div>
+                  <!-- SLIDER -->
+                </div>
+              </div>
+              <div aria-haspopup="true" aria-expanded="false">
+                <div class="slider">
+                  <div class="d-flex justify-content-between">
+                    <div class="body-small">Presence Penalty
+                    </div>
+                    <div><input class="input-small" type="number"></div>
+                  </div>
+                  <!-- SLIDER -->
+                </div>
+              </div>
+              <div aria-haspopup="true" aria-expanded="false">
+                <div class="slider">
+                  <div class="d-flex justify-content-between">
+                    <div class="body-small">Best Of</div>
+                    <div><input class="input-small" type="number"></div>
+                  </div>
+                  <!-- SLIDER -->
+                </div>
+              </div>
             </div>
           </div>
         </div>

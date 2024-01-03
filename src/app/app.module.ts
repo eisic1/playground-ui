@@ -1,9 +1,16 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import {TagInputModule} from 'ngx-chips';
 
 import { AppComponent } from './app.component';
 import { OpenaiPlaygroundComponent } from './openai-playground/openai-playground.component';
 import { OpenaiPresetComponent } from './openai-preset/openai-preset.component';
+import { 
+  NbThemeModule, 
+  NbLayoutModule, 
+  NbCardModule, 
+  NbSelectModule 
+} from '@nebular/theme';
 
 @NgModule({
   declarations: [
@@ -12,7 +19,7 @@ import { OpenaiPresetComponent } from './openai-preset/openai-preset.component';
     OpenaiPresetComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule, NbThemeModule.forRoot(), NbLayoutModule, NbCardModule, NbSelectModule, TagInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]
