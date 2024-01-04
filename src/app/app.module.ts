@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 import {TagInputModule} from 'ngx-chips';
 
 import { AppComponent } from './app.component';
@@ -19,7 +20,13 @@ import {
     OpenaiPresetComponent
   ],
   imports: [
-    BrowserModule, NbThemeModule.forRoot(), NbLayoutModule, NbCardModule, NbSelectModule, TagInputModule
+    BrowserModule, 
+    NbThemeModule.forRoot(), 
+    NbLayoutModule, 
+    NbCardModule, 
+    NbSelectModule, 
+    TagInputModule, 
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
