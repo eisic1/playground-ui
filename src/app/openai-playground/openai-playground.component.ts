@@ -37,6 +37,17 @@ export class OpenaiPlaygroundComponent {
     return text;
   }
 
+  get resultWordCount(): number {
+    let count = 0;
+    if (this.resultText.length === 0) return count;
+    count = this.resultText.trim().split(/\s+/).length;
+    return count;
+  }
+
+  get resultTokenCount(): number {
+    return Math.round(this.resultText.length / 4);
+  }
+
   runSubmit(){
     this.resultText = 'Create an API that returns a result!';
   }

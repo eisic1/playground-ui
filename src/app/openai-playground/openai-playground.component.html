@@ -42,9 +42,9 @@
                   <textarea [(ngModel)]="resultText" class="form-control h-100 no-resize fw-bold" readonly></textarea>
                 </div>
               <div class="mt-2 mb-2">Result Character count: <span
-                class="playground-number badge mr-4 text-dark">0</span>
-                Result Word count: <span class="playground-number badge mr-4 text-dark">0</span>
-                Result Token count: <span class="playground-number badge mr-4 text-dark">0</span>
+                class="playground-number badge mr-4 text-dark">{{ resultText.length }}</span>
+                Result Word count: <span class="playground-number badge mr-4 text-dark">{{ resultWordCount }}</span>
+                Result Token count: <span class="playground-number badge mr-4 text-dark">{{ resultTokenCount }}</span>
               </div>
             </div>
           </div>
