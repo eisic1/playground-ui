@@ -1,12 +1,21 @@
 import { Component, Input } from '@angular/core';
+import { trigger, state, style, animate, transition } from '@angular/animations';
 
 @Component({
   selector: 'app-openai-playground',
   templateUrl: './openai-playground.component.html',
-  styleUrls: ['./openai-playground.component.css']
+  styleUrls: ['./openai-playground.component.css'],
+  animations: [
+    trigger('fade', [
+      state('in', style({ opacity: 1 })),
+      transition(':enter', [animate(300, style({ opacity: 0 }))]),
+      transition(':leave', animate(300, style({ opacity: 0 }))),
+    ]),
+  ],
 })
 export class OpenaiPlaygroundComponent {
   content: string = '';
+  resultText: string = '';
 
   get wordCount(): number {
     let count = 0;
@@ -28,9 +37,30 @@ export class OpenaiPlaygroundComponent {
     return text;
   }
 
-  runSubmit(){}
+  runSubmit(){
+    this.resultText = 'Create an API that returns a result!';
+  }
 
-  copyResult(){}
+  copyResult(){
+    if (this.resultText) {
+      this.resultText.trim();
+      const selBox = document.createElement('textarea');
+      selBox.style.position = 'fixed';
+      selBox.style.left = '0';
+      selBox.style.top = '0';
+      selBox.style.opacity = '0';
+      selBox.value = this.resultText;
+      document.body.appendChild(selBox);
+      selBox.focus();
+      selBox.select();
+      document.execCommand('copy');
+      document.body.removeChild(selBox);
+      //this.toastrService.show('Text copied into clipboard', 'copied', {status: 'success', duration: 8000});
+    }
+  }
 
-  clearEditor(){}
+  clearEditor(){
+    this.content = '';
+    this.resultText = '';
+  }
 }

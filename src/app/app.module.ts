@@ -3,6 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import {TagInputModule} from 'ngx-chips';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 import { AppComponent } from './app.component';
 import { OpenaiPlaygroundComponent } from './openai-playground/openai-playground.component';
 import { OpenaiPresetComponent } from './openai-preset/openai-preset.component';
@@ -26,7 +28,8 @@ import {
     NbCardModule, 
     NbSelectModule, 
     TagInputModule, 
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

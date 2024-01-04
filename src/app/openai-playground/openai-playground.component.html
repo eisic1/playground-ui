@@ -39,7 +39,7 @@
             <div class="playground-container-wrapper response">
               <!-- PLAYGROUND CONTAINER ngx-openai-editor -->
                 <div class="playground-container">
-                  <textarea class="form-control h-100 no-resize" readonly></textarea>
+                  <textarea [(ngModel)]="resultText" class="form-control h-100 no-resize fw-bold" readonly></textarea>
                 </div>
               <div class="mt-2 mb-2">Result Character count: <span
                 class="playground-number badge mr-4 text-dark">0</span>
